@@ -187,7 +187,7 @@ public:
          break;
 
       default:
-         Error();
+         Error_q0();
       }
    }
 
@@ -210,7 +210,7 @@ public:
          break;
 
       default:
-         Error();
+         Error_q1();
       }
    }
 
@@ -229,7 +229,7 @@ public:
          break;
 
       default:
-         Error();
+         Error_q2();
       }
    }
 
@@ -248,7 +248,7 @@ public:
          break;
 
       default:
-         Error();
+         Error_q3();
       }
    }
 
@@ -263,7 +263,7 @@ public:
          break;
 
       default:
-         Error();
+         Error_q4();
       }
    }
 
@@ -278,7 +278,7 @@ public:
          break;
 
       default:
-         Error();
+         Error_q5();
       }
    }
    
@@ -293,7 +293,7 @@ public:
          break;
 
       default:
-         Error();
+         Error_q6();
       }
    }
 
@@ -305,7 +305,49 @@ public:
 
    void Error1(char ch)
    {
-      cout << "wrong chain with simbol " << ch << endl;
+      cout << "wrong simbol" << ch << endl;
+      q = &Decimal_fractions::Error1;
+   }
+
+   void Error_q0()
+   {
+      cout << "The number must start with a digit or a dot." << endl;
+      q = &Decimal_fractions::Error1;
+   }
+
+   void Error_q1()
+   {
+      cout << "The sign should only be placed after the E." << endl;
+      q = &Decimal_fractions::Error1;
+   }
+
+   void Error_q2()
+   {
+      cout << "There should be a digit or an E after the dot and the digit." << endl;
+      q = &Decimal_fractions::Error1;
+   }
+
+   void Error_q3()
+   {
+      cout << "There should be a number or a sign after the E." << endl;
+      q = &Decimal_fractions::Error1;
+   }
+
+   void Error_q4()
+   {
+      cout << "There should be only a number after the sign." << endl;
+      q = &Decimal_fractions::Error1;
+   }
+
+   void Error_q5()
+   {
+      cout << "There should be only a digit after the E and the digit." << endl;
+      q = &Decimal_fractions::Error1;
+   }
+
+   void Error_q6()
+   {
+      cout << "There should be only a number after the dot." << endl;
       q = &Decimal_fractions::Error1;
    }
 };
